@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+	meta(charset="UTF-8")
+	title Document
+	link(rel="stylesheet", href="style/bootstrap.min.css")
+body
+	form(action="/insert" method="post")
+		input(type="text" name="name")
+		input(type="text" name="age")
+		input(type="text" name="sex")
+		input(type="submit" value="添加")
+
+
+	table.table.table-bordered
+		thead
+			th 姓名
+			th 年龄
+			th 性别
+
+		tbody
+		each val,index in student
+			tr
+				td=val.name
+				td=val.age
+				td=val.sex
+				//- td=val
+
+	
